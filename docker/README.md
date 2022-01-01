@@ -5,6 +5,12 @@ docker build -t arm_build_gdb_env:v16.01 .
 sudo docker images | grep env
 arm_build_gdb_env                 v16.01               54186d335d1b        5 minutes ago       757MB
 ```
+# How to donwload
+```
+docker pull freelin/arm_build_gdb_env:v16.01
+or
+docker run -it --rm --privileged -v  $HOME:/home freelin/arm_build_gdb_env:v16.01
+```
 # How to use
 ```
 sudo docker run -it --rm --privileged -v /dev/bus/usb/001/003:/dev/bus/usb/001/003 -v  $HOME:/home arm_build_gdb_env:v16.01
